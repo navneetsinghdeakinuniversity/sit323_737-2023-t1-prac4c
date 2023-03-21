@@ -1,0 +1,22 @@
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service"}
+{"level":"info","message":"New operation [object Object] operation requested:","service":"user-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service"}
+{"level":"info","message":"New operation [object Object] operation requested:","service":"user-service"}
+{"level":"info","message":"Performing [object Object] operation:","service":"user-service"}
+{"level":"info","message":"Result of [object Object] operation: 7","service":"user-service"}
+{"level":"info","message":"New operation (n1,n2) => {\r\n    return n1+n2;\r\n} operation requested:","service":"user-service"}
+{"level":"info","message":"Performing (n1,n2) => {\r\n    return n1+n2;\r\n} operation:","service":"user-service"}
+{"level":"info","message":"Result of (n1,n2) => {\r\n    return n1+n2;\r\n} operation: 7","service":"user-service"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T08:41:43.003Z"}
+{"level":"info","message":"Performing addition operation: 2 + 5","service":"user-service","timestamp":"2023-03-21T08:41:43.006Z"}
+{"level":"info","message":"Result of addition operation: 7","service":"user-service","timestamp":"2023-03-21T08:41:43.007Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T08:42:34.082Z"}
+{"level":"info","message":"Performing addition operation: 55 + 5","service":"user-service","timestamp":"2023-03-21T08:42:34.083Z"}
+{"level":"info","message":"Result of addition operation: 60","service":"user-service","timestamp":"2023-03-21T08:42:34.085Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T08:42:43.002Z"}
+{"level":"info","message":"Performing addition operation: 55 + 5","service":"user-service","timestamp":"2023-03-21T08:42:43.003Z"}
+{"level":"info","message":"Result of addition operation: 60","service":"user-service","timestamp":"2023-03-21T08:42:43.004Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:19.481Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:48.164Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:58.613Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:44:09.567Z"}

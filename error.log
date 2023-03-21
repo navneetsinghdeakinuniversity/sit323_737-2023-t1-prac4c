@@ -1,0 +1,6 @@
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:19.481Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:48.164Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:58.613Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:44:09.567Z"}
