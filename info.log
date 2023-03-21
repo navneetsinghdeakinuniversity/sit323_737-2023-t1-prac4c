@@ -20,3 +20,54 @@
 {"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:48.164Z"}
 {"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:43:58.613Z"}
 {"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T08:44:09.567Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:09:28.413Z"}
+{"level":"info","message":"Performing addition operation: 200 + 10","service":"user-service","timestamp":"2023-03-21T09:09:28.415Z"}
+{"level":"info","message":"Result of addition operation: 210","service":"user-service","timestamp":"2023-03-21T09:09:28.416Z"}
+{"level":"info","message":"New subtraction operation requested:","service":"user-service","timestamp":"2023-03-21T09:09:37.535Z"}
+{"level":"info","message":"Performing subtraction operation: 200 - 10","service":"user-service","timestamp":"2023-03-21T09:09:37.536Z"}
+{"level":"info","message":"Result of subtraction operation: 190","service":"user-service","timestamp":"2023-03-21T09:09:37.538Z"}
+{"level":"info","message":"New multiplication operation requested:","service":"user-service","timestamp":"2023-03-21T09:09:46.260Z"}
+{"level":"info","message":"Performing multiplication operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:09:46.261Z"}
+{"level":"info","message":"Result of multiplication operation: 2000","service":"user-service","timestamp":"2023-03-21T09:09:46.262Z"}
+{"level":"info","message":"New division operation requested:","service":"user-service","timestamp":"2023-03-21T09:09:52.106Z"}
+{"level":"info","message":"Performing division operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:09:52.107Z"}
+{"level":"info","message":"Result of division operation: 20","service":"user-service","timestamp":"2023-03-21T09:09:52.108Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:10:01.349Z"}
+{"level":"info","message":"Performing addition operation: 2 + 10","service":"user-service","timestamp":"2023-03-21T09:10:01.350Z"}
+{"level":"info","message":"Result of addition operation: 12","service":"user-service","timestamp":"2023-03-21T09:10:01.351Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:10:56.133Z"}
+{"level":"info","message":"Performing addition operation: 200 + 10","service":"user-service","timestamp":"2023-03-21T09:10:56.134Z"}
+{"level":"info","message":"Result of addition operation: 210","service":"user-service","timestamp":"2023-03-21T09:10:56.135Z"}
+{"level":"info","message":"New subtraction operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:01.804Z"}
+{"level":"info","message":"Performing subtraction operation: 200 - 10","service":"user-service","timestamp":"2023-03-21T09:11:01.805Z"}
+{"level":"info","message":"Result of subtraction operation: 190","service":"user-service","timestamp":"2023-03-21T09:11:01.806Z"}
+{"level":"info","message":"New multiplication operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:06.027Z"}
+{"level":"info","message":"Performing multiplication operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:11:06.028Z"}
+{"level":"info","message":"Result of multiplication operation: 2000","service":"user-service","timestamp":"2023-03-21T09:11:06.029Z"}
+{"level":"info","message":"New division operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:09.017Z"}
+{"level":"info","message":"Performing division operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:11:09.018Z"}
+{"level":"info","message":"Result of division operation: 20","service":"user-service","timestamp":"2023-03-21T09:11:09.019Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:15.517Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:11:15.518Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:25.232Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:11:25.233Z"}
+{"level":"info","message":"New division operation requested:","service":"user-service","timestamp":"2023-03-21T09:11:37.369Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:11:37.370Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:12:55.881Z"}
+{"level":"info","message":"Performing addition operation: 200 + 10","service":"user-service","timestamp":"2023-03-21T09:12:55.882Z"}
+{"level":"info","message":"Result of addition operation: 210","service":"user-service","timestamp":"2023-03-21T09:12:55.882Z"}
+{"level":"info","message":"New subtraction operation requested:","service":"user-service","timestamp":"2023-03-21T09:12:57.529Z"}
+{"level":"info","message":"Performing subtraction operation: 200 - 10","service":"user-service","timestamp":"2023-03-21T09:12:57.530Z"}
+{"level":"info","message":"Result of subtraction operation: 190","service":"user-service","timestamp":"2023-03-21T09:12:57.531Z"}
+{"level":"info","message":"New multiplication operation requested:","service":"user-service","timestamp":"2023-03-21T09:12:58.489Z"}
+{"level":"info","message":"Performing multiplication operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:12:58.490Z"}
+{"level":"info","message":"Result of multiplication operation: 2000","service":"user-service","timestamp":"2023-03-21T09:12:58.490Z"}
+{"level":"info","message":"New division operation requested:","service":"user-service","timestamp":"2023-03-21T09:12:59.221Z"}
+{"level":"info","message":"Performing division operation: 200 * 10","service":"user-service","timestamp":"2023-03-21T09:12:59.222Z"}
+{"level":"info","message":"Result of division operation: 20","service":"user-service","timestamp":"2023-03-21T09:12:59.222Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:13:00.645Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:00.646Z"}
+{"level":"info","message":"New addition operation requested:","service":"user-service","timestamp":"2023-03-21T09:13:01.802Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:01.803Z"}
+{"level":"info","message":"New division operation requested:","service":"user-service","timestamp":"2023-03-21T09:13:03.218Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:03.219Z"}

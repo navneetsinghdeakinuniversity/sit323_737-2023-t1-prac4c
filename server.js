@@ -82,54 +82,7 @@ app.get("/subtract", (req,res)=>{
     try{
         const n1= parseFloat(req.query.n1);
         const n2= parseFloat(req.query.n2);
-        if(isNaN(n1)){
-            throw new Error("n1 is incorrectly defined");
-        }
-        if(isNaN(n2)){
-            throw new Error("n2 is incorrectly defined");
-        }
-
-        if (n1 === NaN || n2 === NaN) {
-            console.log()
-            throw new Error("Parsing Error");
-        }
-        
-        const result = subtract(n1,n2);
-        res.status(200).json({statuscode:200, data: result });
-    } catch(error) {
-        console.log(error)
-        res.status(500).json({statuscode:500, msg: error.toString() })
-    }
-});
-
-app.get("/multiply", (req,res)=>{
-    try{
-        const n1= parseFloat(req.query.n1);
-        const n2= parseFloat(req.query.n2);
-        if(isNaN(n1)){
-            throw new Error("n1 is incorrectly defined");
-        }
-        if(isNaN(n2)){
-            throw new Error("n2 is incorrectly defined");
-        }
-
-        if (n1 === NaN || n2 === NaN) {
-            console.log()
-            throw new Error("Parsing Error");
-        }
-        
-        const result = multiply(n1,n2);
-        res.status(200).json({statuscode:200, data: result });
-    } catch(error) {
-        console.log(error)
-        res.status(500).json({statuscode:500, msg: error.toString() })
-    }
-});
-
-app.get("/divide", (req,res)=>{
-    try{
-        const n1= parseFloat(req.query.n1);
-        const n2= parseFloat(req.query.n2);
+        logger.info(`New subtraction operation requested:`);
         if(isNaN(n1)){
             logger.error("n1 is incorrectly defined");
             throw new Error("n1 is incorrectly defined");
@@ -144,8 +97,70 @@ app.get("/divide", (req,res)=>{
             logger.error("Parsing error");
             throw new Error("Parsing Error");
         }
+        logger.info(`Performing subtraction operation: ${n1} - ${n2}`);
         
+        const result = subtract(n1,n2);
+        logger.info(`Result of subtraction operation: ${result}`);
+        res.status(200).json({statuscode:200, data: result });
+    } catch(error) {
+        console.log(error)
+        res.status(500).json({statuscode:500, msg: error.toString() })
+    }
+});
+
+app.get("/multiply", (req,res)=>{
+    try{
+        const n1= parseFloat(req.query.n1);
+        const n2= parseFloat(req.query.n2);
+        logger.info(`New multiplication operation requested:`);
+        if(isNaN(n1)){
+            logger.error("n1 is incorrectly defined");
+            throw new Error("n1 is incorrectly defined");
+        }
+        if(isNaN(n2)){
+            logger.error("n2 is incorrectly defined");
+            throw new Error("n2 is incorrectly defined");
+        }
+
+        if (n1 === NaN || n2 === NaN) {
+            console.log()
+            logger.error("Parsing error");
+            throw new Error("Parsing Error");
+        }
+        logger.info(`Performing multiplication operation: ${n1} * ${n2}`);
+        
+        const result = multiply(n1,n2);
+        logger.info(`Result of multiplication operation: ${result}`);
+        res.status(200).json({statuscode:200, data: result });
+    } catch(error) {
+        console.log(error)
+        res.status(500).json({statuscode:500, msg: error.toString() })
+    }
+});
+
+app.get("/divide", (req,res)=>{
+    try{
+        const n1= parseFloat(req.query.n1);
+        const n2= parseFloat(req.query.n2);
+        logger.info(`New division operation requested:`);
+        if(isNaN(n1)){
+            logger.error("n1 is incorrectly defined");
+            throw new Error("n1 is incorrectly defined");
+        }
+        if(isNaN(n2)){
+            logger.error("n2 is incorrectly defined");
+            throw new Error("n2 is incorrectly defined");
+        }
+
+        if (n1 === NaN || n2 === NaN) {
+            console.log()
+            logger.error("Parsing error");
+            throw new Error("Parsing Error");
+        }
+        logger.info(`Performing division operation: ${n1} * ${n2}`);
+
         const result = divide(n1,n2);
+        logger.info(`Result of division operation: ${result}`);
         res.status(200).json({statuscode:200, data: result });
     } catch(error) {
         console.log(error)
