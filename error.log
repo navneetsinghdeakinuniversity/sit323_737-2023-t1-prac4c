@@ -10,3 +10,7 @@
 {"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:00.646Z"}
 {"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:01.803Z"}
 {"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-21T09:13:03.219Z"}
+{"level":"error","message":"n2 is incorrectly defined","service":"user-service","timestamp":"2023-03-28T11:14:24.993Z"}
+{"level":"error","message":"Division by zero undefined","service":"user-service","timestamp":"2023-03-28T11:15:10.760Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-28T11:15:24.873Z"}
+{"level":"error","message":"n1 is incorrectly defined","service":"user-service","timestamp":"2023-03-28T11:15:54.656Z"}
