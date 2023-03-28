@@ -2,24 +2,97 @@ const express = require("express");
 const res = require("express/lib/response");
 const app = express();
 
+
+
+
+
+const cors = require('cors');
+const { hashSync, compareSync } = require('bcrypt');
+const UserModel = require('./config/database');
+const jwt = require('jsonwebtoken');
+const passport = require('passport');
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(cors());
+app.use(passport.initialize());
+
+require('./config/passport')
+
+app.post('/register', (req, res) => {
+    const user = new UserModel({
+        username: req.body.username,
+        password: hashSync(req.body.password, 10)
+    })
+
+    user.save().then(user => {
+        res.send({
+            success: true,
+            message: "User created successfully.",
+            user: {
+                id: user._id,
+                username: user.username
+            }
+        })
+    }).catch(err => {
+        res.send({
+            success: false,
+            message: "Something went wrong",
+            error: err
+        })
+    })
+})
+
+app.post('/login', (req, res) => {
+    UserModel.findOne({ username: req.body.username }).then(user => {
+        //No user found
+        if (!user) {
+            return res.status(401).send({
+                success: false,
+                message: "Could not find the user."
+            })
+        }
+
+        //Incorrect password
+        if (!compareSync(req.body.password, user.password)) {
+            return res.status(401).send({
+                success: false,
+                message: "Incorrect password"
+            })
+        }
+
+        const payload = {
+            username: user.username,
+            id: user._id
+        }
+
+        const token = jwt.sign(payload, "secretofnavneet", { expiresIn: "1d" })
+
+        return res.status(200).send({
+            success: true,
+            message: "Logged in successfully!",
+            token: "Bearer " + token
+        })
+    })
+})
+
 const {transports, createLogger, format} = require('winston');
+    const logger = createLogger({
+        // Creating a format for logging by using simple winston format and combining it with timetamp.
+        format: format.combine(
+            format.timestamp(),
+            format.json()
+        ),
+        defaultMeta: {service: 'user-service'},
+        transports: [
+            // -Write all the logs with importance level of 'error or less in 'error.log'
+            // Write all logs with importance level of 'info' or less to 'info.log'
 
-const logger = createLogger({
-    // Creating a format for logging by using simple winston format and combining it with timetamp.
-    format: format.combine(
-        format.timestamp(),
-        format.json()
-    ),
-    defaultMeta: {service: 'user-service'},
-    transports: [
-        // -Write all the logs with importance level of 'error or less in 'error.log'
-        // Write all logs with importance level of 'info' or less to 'info.log'
-
-        new transports.Console(),
-        new transports.File({ filename: 'error.log', level: 'error'}),
-        new transports.File({ filename: 'info.log', level:'info'}),
-    ],
-});
+            new transports.Console(),
+            new transports.File({ filename: 'error.log', level: 'error'}),
+            new transports.File({ filename: 'info.log', level:'info'}),
+        ],
+    });
 
 // If not in production then log to the console.
 
@@ -74,8 +147,9 @@ function checknan(n1,n2) {
     }
 }
 
-// defining endpoints
-app.get("/add", (req,res)=>{
+
+
+app.get("/add", passport.authenticate('jwt', { session: false }), (req,res)=>{
     try{
         // get the numbers from the URL request
         const n1= parseFloat(req.query.n1);
@@ -98,7 +172,7 @@ app.get("/add", (req,res)=>{
     }
 });
 
-app.get("/subtract", (req,res)=>{
+app.get("/subtract", passport.authenticate('jwt', { session: false }), (req,res)=>{
     try{
         // get the numbers from the URL request
         const n1= parseFloat(req.query.n1);
@@ -120,7 +194,7 @@ app.get("/subtract", (req,res)=>{
     }
 });
 
-app.get("/multiply", (req,res)=>{
+app.get("/multiply", passport.authenticate('jwt', { session: false }), (req,res)=>{
     try{
         // get the numbers from the URL request
         const n1= parseFloat(req.query.n1);
@@ -143,7 +217,7 @@ app.get("/multiply", (req,res)=>{
     }
 });
 
-app.get("/divide", (req,res)=>{
+app.get("/divide", passport.authenticate('jwt', { session: false }), (req,res)=>{
     try{
         // get the numbers from the URL request
         const n1= parseFloat(req.query.n1);
@@ -173,7 +247,17 @@ app.get("/divide", (req,res)=>{
 });
 
 
-const port=3040;
-app.listen(port,() => {
-    console.log("hello I'm listening to port: "+port);
-})
+//     return res.status(200).send({
+//         success: true,
+//         user: {
+//             id: req.user._id,
+//             username: req.user.username,
+//         }
+
+
+app.listen(5000, () => console.log("Listening to port 5000"));
+
+
+
+
+
